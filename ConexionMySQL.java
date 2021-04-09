@@ -1,22 +1,26 @@
 package ConexionMySQL;
 
-
+//Importando librerias necesarias para la conexion MYSQL
 import java.sql.DriverManager;
-import javax.swing.JOptionPane;
+import javax.swing.JOptionPane; 
 import com.mysql.jdbc.Connection;
 
 public class ConexionMySQL {
+	//Atributos
 	private String user;
 	private String password;
-	Connection conectar = null;
+	public Connection conectar = null;
 	
+	//Metodos
+	//Constructor con parametros
 	public ConexionMySQL(String user, String password) {
 		super();
-
 		this.user = user;
 		this.password = password;
 	}
 	
+	
+	//Metodo retorna una variable de tipo Connection
 	public Connection conexion() {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
